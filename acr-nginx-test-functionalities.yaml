@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 3-agentsp-deployment
+  namespace: kube-system
+  labels:
+    app: nginx0-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx0
+  template:
+    metadata:
+      labels:
+        app: nginx0
+    spec:
+      containers:
+      - name: nginx
+        image: xxxuhong.azurecr.io/nginx:v1
+        ports:
+        - containerPort: 80
