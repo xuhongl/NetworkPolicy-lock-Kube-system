@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 3-agentsp-deployment
+  name: 4-agentsp-deployment
   namespace: kube-system
   labels:
     app: nginx0-deployment
